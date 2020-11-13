@@ -14,7 +14,7 @@ body {
   position: relative;
   text-align: center;
   color: black;
-  font-size: 4em;
+  font-size: 5em;
   letter-spacing: 0.5em;
   /* Animation provies a slight random skew. Check bottom of doc for more information on how to random skew. */
   animation: glitch-skew 1s infinite linear alternate-reverse;
@@ -260,12 +260,13 @@ body {
 #video {
   display: block;
   margin: auto;
+  padding-bottom: 20px;
 }
 
 .social-links {
   height: 100%;
     position: fixed;
-    bottom: -6rem;
+    bottom: -7rem;
     left: .5rem;
     padding: 5rem 0;
     display: flex;
@@ -283,7 +284,7 @@ body {
   transform: rotate(180deg);
   color: black;
   font-size: 20px;
-  line-height: 1;
+  line-height: 1.5;
   white-space: nowrap;
   pointer-events: auto;
   
@@ -300,3 +301,26 @@ button {
 }
 
 
+.bottomnav {
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.bottomnav a {
+  font-size: 20px;
+ 
+}
+
+.active {
+  margin-left: 3rem;
+}
+
+#news,
+#photos,
+#contact {
+  margin-left: .5rem;
+}
+
+#wrapper {
+  padding: 0;
+}
