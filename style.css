@@ -266,9 +266,9 @@ body {
 .social-links {
   height: 100%;
   position: fixed;
-  bottom: -7rem;
-  left: 0.5rem;
-  padding: 5rem 0;
+  bottom: -7em;
+  left: 0.5em;
+  padding: 5em 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -300,7 +300,8 @@ button {
 
 .bottomnav {
   overflow: hidden;
-  padding: 1.5rem;
+  padding: 1.5em;
+  margin-top: 1.5em;
 }
 
 .bottomnav a {
@@ -308,17 +309,18 @@ button {
 }
 
 .active {
-  margin-left: 3rem;
+  margin-left: 3em;
 }
 
 #news,
 #photos,
 #contact {
-  margin-left: 0.5rem;
+  margin-left: 0.5em;
+  margin-top: 3em;
 }
 
 #wrapper {
-  padding: 0;
+  margin-bottom: -3em;
 }
 
 .modal-bg-news {
