@@ -7,7 +7,7 @@ Bright Lilac: #CF99EA
 Black: #000000 */
 
 body {
-  background-color: #EBE3CE;
+  background-color: #ebe3ce;
   font-family: "Covered By Your Grace", cursive;
 }
 .glitch {
@@ -27,7 +27,7 @@ body {
   width: 100%;
   height: 100%;
   left: 2px;
-  text-shadow: -2px 0 #CF99EA;
+  text-shadow: -2px 0 #cf99ea;
   /* Creates an initial clip for our glitch. This works in a typical top,right,bottom,left fashion and creates a mask to only show a certain part of the glitch at a time. */
   clip: rect(44px, 450px, 56px, 0);
   /* Runs our glitch-anim defined below to run in a 5s loop, infinitely, with an alternating animation to keep things fresh. */
@@ -41,7 +41,7 @@ body {
   width: 100%;
   height: 100%;
   left: -2px;
-  text-shadow: -2px 0 #CF99EA, 2px 2px #88AFCF;
+  text-shadow: -2px 0 #cf99ea, 2px 2px #88afcf;
   animation: glitch-anim2 1s infinite linear alternate-reverse;
 }
 
@@ -265,18 +265,17 @@ body {
 
 .social-links {
   height: 100%;
-    position: fixed;
-    bottom: -7rem;
-    left: .5rem;
-    padding: 5rem 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    -ms-writing-mode: tb-lr;
-    writing-mode: vertical-lr;
-    pointer-events: none;
-    z-index: 1;
-    
+  position: fixed;
+  bottom: -7rem;
+  left: 0.5rem;
+  padding: 5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .social-links a {
@@ -287,7 +286,6 @@ body {
   line-height: 1.5;
   white-space: nowrap;
   pointer-events: auto;
-  
 }
 
 a,
@@ -300,7 +298,6 @@ button {
   cursor: pointer;
 }
 
-
 .bottomnav {
   overflow: hidden;
   padding: 1.5rem;
@@ -308,7 +305,6 @@ button {
 
 .bottomnav a {
   font-size: 20px;
- 
 }
 
 .active {
@@ -318,9 +314,76 @@ button {
 #news,
 #photos,
 #contact {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 #wrapper {
   padding: 0;
+}
+
+.modal-bg-news {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+.modal-bg-photos {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.modal-bg-contact {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  background: #88afcf;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
 }
