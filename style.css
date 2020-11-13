@@ -300,8 +300,7 @@ button {
 
 .bottomnav {
   overflow: hidden;
-  padding: 1.5em;
-  margin-top: 1.5em;
+  margin-top: 3em;
 }
 
 .bottomnav a {
@@ -388,4 +387,12 @@ button {
   right: 10px;
   font-weight: bold;
   cursor: pointer;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
