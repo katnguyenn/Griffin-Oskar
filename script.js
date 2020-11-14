@@ -23,3 +23,7 @@ modalClose.on("click", function () {
     modalBgPhotos.removeClass("bg-active");
     modalBgContact.removeClass("bg-active");
 });
+
+let endpoint = 	'https://api.spotify.com/v1/artists/griffinoskar'
+let apikey = 'b3d0c7d5713049569240944b341bda56'
+
