@@ -24,6 +24,48 @@ modalClose.on("click", function () {
     modalBgContact.removeClass("bg-active");
 });
 
-let endpoint = 	'https://api.spotify.com/v1/artists/griffinoskar'
+let endpoint = 	'https://api.spotify.com/v1/artists/spotify:artist:5ziQ5Xt7CSrcnatEC4Ufy6'
+let clientId = 'c2df46601887473ea1f0dd4ba51565a6'
 let apikey = 'b3d0c7d5713049569240944b341bda56'
 
+// $.ajax({
+//     url: https://api.spotify.com/v1/users/{user_id}/playlists,
+//     method: "GET"
+// }).then(function(response) {
+//     "name": "Griffin Oskar",
+//     "description": "Griffin Oskar",
+//     "public": false
+//   });
+
+  handlePlaylistSubmit(e) {
+      e.preventDefault();
+      const likesNeeded = e.target.playlistLikesNeeded.value
+
+      let jsonData = {
+          name: e.target.playlistName.value,
+          public: false,
+          description: e.target.playlistDescription.value
+      };
+  }
+
+  // Send the entered data to create a playlist in spotify and the database
+  axios({
+      method: 'post',
+      url: 'https://api.spotify.com/v1/users/${this.state.userReducer.SpotifyId}/playlists',
+      data: jsonData,
+      dataType: 'json',
+      headers: {
+          'Authorization': 'Bearer ' + this.state.userReducer.accessToken,
+          'Content-Type': 'application/json'
+      }})
+      .then(res => {
+          const data = {
+              name: res.data.name,
+              externalUrl: res.data.external_urls.spotify,
+              playlistId: res.data.id,
+              userId: this.state.userReducer.id,
+              likesNeeded: likesNeeded
+          }
+          const postChatThunk = postChat(data)
+          store.dispatch(postChatThunk)
+      })
