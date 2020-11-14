@@ -298,24 +298,24 @@ button {
   cursor: pointer;
 }
 
-.bottomnav {
+/* .bottomnav {
   overflow: hidden;
   margin-top: 3em;
 }
 
 .bottomnav a {
   font-size: 20px;
-}
+} */
 
-.active {
-  margin-left: 3em;
-}
+
 
 #news,
+#tours,
 #photos,
 #contact {
   margin-left: 0.5em;
   margin-top: 3em;
+  font-size: 20px;
 }
 
 #wrapper {
