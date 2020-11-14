@@ -265,6 +265,8 @@ body {
   display: block;
   margin: auto;
   padding-bottom: 20px;
+  width: 860px;
+  height: 400px;
 }
 
 .social-links {
@@ -310,8 +312,6 @@ button {
 .bottomnav a {
   font-size: 20px;
 } */
-
-
 
 #news,
 #tours,
@@ -414,4 +414,47 @@ button {
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  #video {
+    width: 400px;
+    height: 250px;
+  }
+
+  #soundcloud {
+    display: none;
+  }
+  
+}
+
+@media only screen and (max-width: 768px) {
+  #video {
+    width: 600px;
+    height: 330px;
+  }
+
+  #soundcloud {
+    display: none;
+  }
+
+  .social-links {
+    bottom: -10em;
+  }
+
+  #news,
+  #tours,
+  #photos,
+  #contact {
+    margin-left: 0.5em;
+    margin-top: 3em;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  #footer-rights {
+    margin-bottom: auto;
+  }
 }

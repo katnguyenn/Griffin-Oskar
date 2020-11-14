@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="app">
         <div id="wrapper">
@@ -19,64 +21,74 @@
         </div>
     </div>
 
-    <iframe width="860" height="400" id="video" src="https://www.youtube.com/embed/4IQoNu5Z3pA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!--Youtube Video-->
+    <iframe id="video" src="https://www.youtube.com/embed/4IQoNu5Z3pA" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
 
+    <!--Social Media side navigation-->
     <div class="social-links">
 
-        <a href="https://www.instagram.com/griffinoskar/?hl=en">instagram</a>
-        <a href="https://www.facebook.com/GriffinOskar/">facebook</a>
-        <a href="https://twitter.com/griffinoskar?lang=en">twitter</a>
-        <a href="https://www.youtube.com/c/GriffinOskar">youtube</a>
-        <a href="https://soundcloud.com/griffinoskar">soundcloud</a>
-        <a href="https://open.spotify.com/artist/5ziQ5Xt7CSrcnatEC4Ufy6">spotify</a>
-        <a href="https://music.apple.com/us/artist/griffin-oskar/1199232738">apple music</a>
+        <a href="https://www.instagram.com/griffinoskar/?hl=en" id="instagram">instagram</a>
+        <a href="https://www.facebook.com/GriffinOskar/" id="facebook">facebook</a>
+        <a href="https://twitter.com/griffinoskar?lang=en" id="twitter">twitter</a>
+        <a href="https://www.youtube.com/c/GriffinOskar" id="youtube">youtube</a>
+        <a href="https://soundcloud.com/griffinoskar" id="soundcloud">soundcloud</a>
+        <a href="https://open.spotify.com/artist/5ziQ5Xt7CSrcnatEC4Ufy6" id="spotify">spotify</a>
+        <a href="https://music.apple.com/us/artist/griffin-oskar/1199232738" id="apple-music">apple music</a>
 
     </div>
 
+    
 
-<!-- <div class="bottomnav">
+
+    <!-- <div class="bottomnav">
     <a class="active" hef="#home">Home</a>
     <a href="#news" id="news">News</a>
     <a href="#photos" id="photos">Photos</a>
     <a href="#contact" id="contact">Contact</a>
 </div> -->
 
-<div class="modal-bg-tours">
-    <div class="modal">
-        <h2>modal tours</h2>
-        <span class="modal-close">X</span>
+    <!--Modals-->
+    <div class="modal-bg-tours">
+        <div class="modal">
+            <h2>modal tours</h2>
+            <span class="modal-close">X</span>
+        </div>
     </div>
-</div>
-<div class="modal-bg-news">
-    <div class="modal">
-        <h2>modal news</h2>
-        <span class="modal-close">X</span>
+    <div class="modal-bg-news">
+        <div class="modal">
+            <h2>modal news</h2>
+            <span class="modal-close">X</span>
+        </div>
     </div>
-</div>
-<div class="modal-bg-photos">
-    <div class="modal">
-        <h2>modal photos</h2>
-        <span class="modal-close">X</span>
+    <div class="modal-bg-photos">
+        <div class="modal">
+            <h2>modal photos</h2>
+            <span class="modal-close">X</span>
+        </div>
     </div>
-</div>
-<div class="modal-bg-contact">
-    <div class="modal">
-        <h2>modal contact</h2>
-        <span class="modal-close">X</span>
+    <div class="modal-bg-contact">
+        <div class="modal">
+            <h2>modal contact</h2>
+            <span class="modal-close">X</span>
+        </div>
     </div>
-</div>
 
-<footer id="footer">
-    <a href="#contact" id="tours">Tours</a>
-    <a href="#news" id="news">News</a>
-    <a href="#photos" id="photos">Photos</a>
-    <a href="#contact" id="contact">Contact</a>
-    <p>© 2020 Griffin Oskar. All Rights Reserved.</p>
-</footer>
+    <!--Footer-->
+
+    <footer id="footer">
+        <a href="#contact" id="tours">Tours</a>
+        <a href="#news" id="news">News</a>
+        <a href="#photos" id="photos">Photos</a>
+        <a href="#contact" id="contact">Contact</a>
+        <p id="footer-rights">© 2020 Griffin Oskar. All Rights Reserved. Privacy Policy.</p>
+    </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
