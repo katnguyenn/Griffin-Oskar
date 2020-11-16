@@ -12,11 +12,14 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  overflow: hidden;
+  overflow: scroll;
+  padding: 0;
 }
 .glitch {
   position: relative;
   text-align: center;
+  /*Text won't wrap*/
+  /*white-space: nowrap;*/
   color: black;
   font-size: 5em;
   letter-spacing: 0.5em;
@@ -272,7 +275,7 @@ body {
 .social-links {
   height: 100%;
   position: fixed;
-  bottom: -7em;
+  bottom: -2em;
   left: 0.5em;
   padding: 5em 0;
   display: flex;
@@ -409,15 +412,17 @@ button {
 }
 
 #footer {
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
 }
 
-
-
+.container {
+  height: 100%;
+  position: relative;
+}
 @media only screen and (max-width: 480px) {
   #video {
     width: 400px;
@@ -427,7 +432,6 @@ button {
   #soundcloud {
     display: none;
   }
-  
 }
 
 @media only screen and (max-width: 768px) {
@@ -441,7 +445,7 @@ button {
   }
 
   .social-links {
-    bottom: -10em;
+    bottom: 1em;
   }
 
   #news,
