@@ -307,6 +307,15 @@ button {
   cursor: pointer;
 }
 
+.sidenav-trigger {
+  display: none;
+}
+
+.sidenav a {
+  color: white;
+  font-size: 40px;
+}
+
 /* .bottomnav {
   overflow: hidden;
   margin-top: 3em;
@@ -335,7 +344,7 @@ button {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -350,7 +359,7 @@ button {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -364,7 +373,7 @@ button {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -379,7 +388,7 @@ button {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,7 +396,20 @@ button {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s;
 }
-
+.modal-bg-sidenav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
 .bg-active {
   visibility: visible;
   opacity: 1;
@@ -395,9 +417,10 @@ button {
 
 .modal {
   position: relative;
-  background: #88afcf;
-  width: 50%;
-  height: 50%;
+  background: #000000;
+  color: white;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -432,6 +455,14 @@ button {
   #soundcloud {
     display: none;
   }
+
+  .social-links {
+    display: none;
+  }
+
+  .sidenav-trigger {
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -446,6 +477,11 @@ button {
 
   .social-links {
     bottom: 1em;
+    display: none;
+  }
+
+  .sidenav-trigger {
+    display: block;
   }
 
   #news,

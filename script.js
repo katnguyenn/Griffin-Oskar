@@ -24,11 +24,16 @@ contactModal.on("click", function () {
     modalBgContact.addClass("bg-active");
 });
 
+$(".sidenav-trigger").on("click", function () {
+    $(".modal-bg-sidenav").addClass("bg-active");
+});
+
 modalClose.on("click", function () {
     modalBgTours.removeClass("bg-active");
     modalBgNews.removeClass("bg-active");
     modalBgPhotos.removeClass("bg-active");
     modalBgContact.removeClass("bg-active");
+    $(".modal-bg-sidenav").removeClass("bg-active");
 });
 
 let endpoint = 	'https://api.spotify.com/v1/artists/griffinoskar'
