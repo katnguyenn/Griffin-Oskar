@@ -8,16 +8,14 @@ var displayBands = $(".modal-bands");
 var modalClose = $(".modal-close");
 var closeBtn = $("<span><span class='modal-close'>&times</span>");
 
-// toursModal.on("click", function () {
-//     modalBgTours.addClass("bg-active");
-// });
-
 photosModal.on("click", function () {
     modalBgPhotos.addClass("bg-active");
+    $(".social-links").css("display", "none");
 });
 
 contactModal.on("click", function () {
     modalBgContact.addClass("bg-active");
+    $(".social-links").css("display", "none");
 });
 
 $(".sidenav-trigger").on("click", function () {
@@ -74,6 +72,7 @@ toursModal.on("click", function (event) {
     // Preventing the button from trying to submit the form
     event.preventDefault();
     console.log('event listener');
+    $(".social-links").css("display", "none");
     modalBgTours.addClass("bg-active");
     // Storing the artist name
     var inputArtist = "Griffin Oskar";
