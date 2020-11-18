@@ -13,6 +13,7 @@ body {
   width: 100%;
   margin: 0;
   overflow: scroll;
+  overflow-x: hidden;
   padding: 0;
 }
 
@@ -231,8 +232,8 @@ body {
   display: block;
   margin: auto;
   padding-bottom: 20px;
-  width: 860px;
-  height: 400px;
+  width: 800px;
+  height: 450px;
 }
 
 .social-links {
@@ -406,8 +407,7 @@ button {
   }
 
   #video {
-    width: 600px;
-    height: 330px;
+    width: 100%;
   }
 
   #soundcloud {
