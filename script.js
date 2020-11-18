@@ -1,21 +1,13 @@
 var toursModal = $("#tours");
-var newsModal = $("#news");
 var photosModal = $("#photos");
 var contactModal = $("#contact");
-var tourModal = $('#tour-dates');
 var modalBgTours = $(".modal-bg-tours");
-var modalBgNews = $(".modal-bg-news");
 var modalBgPhotos = $(".modal-bg-photos");
 var modalBgContact = $(".modal-bg-contact");
-var modalBgTour = $(".modal-bg-tour");
 var modalClose = $(".modal-close");
 
 toursModal.on("click", function () {
     modalBgTours.addClass("bg-active");
-});
-
-newsModal.on("click", function () {
-    modalBgNews.addClass("bg-active");
 });
 
 photosModal.on("click", function () {
@@ -26,21 +18,14 @@ contactModal.on("click", function () {
     modalBgContact.addClass("bg-active");
 });
 
-tourModal.on("click", function () {
-    modalBgTour.addClass("bg-active");
-});
-
-
 $(".sidenav-trigger").on("click", function () {
     $(".modal-bg-sidenav").addClass("bg-active");
 });
 
 modalClose.on("click", function () {
     modalBgTours.removeClass("bg-active");
-    modalBgNews.removeClass("bg-active");
     modalBgPhotos.removeClass("bg-active");
     modalBgContact.removeClass("bg-active");
-    modalBgTour.removeClass("bg-active");
 });
 
 //Bands In Town API
