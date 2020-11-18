@@ -313,7 +313,8 @@ button {
 
 #news,
 #photos,
-#contact {
+#contact,
+#tour-dates {
   margin-left: 0.5em;
   margin-top: 3em;
 }
@@ -352,6 +353,21 @@ button {
 }
 
 .modal-bg-contact {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.modal-bg-tour {
   position: fixed;
   width: 100%;
   height: 100%;
