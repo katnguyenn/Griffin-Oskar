@@ -383,6 +383,10 @@ button {
   cursor: pointer;
 }
 
+.hide {
+  display: none;
+}
+
 #footer {
   position: relative;
   left: 0;
