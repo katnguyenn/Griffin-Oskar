@@ -15,11 +15,11 @@ body {
   overflow: scroll;
   padding: 0;
 }
+
 .glitch {
   position: relative;
   text-align: center;
-  /*Text won't wrap*/
-  /*white-space: nowrap;*/
+  white-space: nowrap;
   color: black;
   font-size: 5em;
   letter-spacing: 0.5em;
@@ -394,26 +394,17 @@ button {
   height: 100%;
   position: relative;
 }
-@media only screen and (max-width: 480px) {
-  #video {
-    width: 400px;
-    height: 250px;
-  }
-
-  #soundcloud {
-    display: none;
-  }
-
-  .social-links {
-    display: none;
-  }
-
-  .sidenav-trigger {
-    display: block;
+@media only screen and (max-width: 888px) {
+  .glitch {
+    font-size: 60px;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  .glitch {
+    font-size: 50px;
+  }
+
   #video {
     width: 600px;
     height: 330px;
@@ -444,5 +435,34 @@ button {
 
   #footer-rights {
     margin-bottom: auto;
+  }
+}
+
+@media only screen and (max-width: 501px) {
+  .glitch {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .glitch {
+    font-size: 30px;
+  }
+
+  #video {
+    width: 400px;
+    height: 250px;
+  }
+
+  #soundcloud {
+    display: none;
+  }
+
+  .social-links {
+    display: none;
+  }
+
+  .sidenav-trigger {
+    display: block;
   }
 }

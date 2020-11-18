@@ -27,6 +27,7 @@ $(".sidenav-trigger").on("click", function () {
 modalClose.on("click", function () {
     modalBgPhotos.removeClass("bg-active");
     modalBgContact.removeClass("bg-active");
+    $(".modal-bg-sidenav").removeClass("bg-active");
 });
 
 //Bands In Town API
