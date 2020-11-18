@@ -61,6 +61,9 @@ function searchBandsInTown(artist) {
             displayBands.append(comeBack);
             displayBands.prepend(closeBtn);
         }
+        closeBtn.on("click", function () {
+            modalBgTours.removeClass("bg-active");
+        });
     });
 }
 
@@ -76,10 +79,6 @@ toursModal.on("click", function (event) {
 
     // Running the searchBandsInTown function(passing in the artist as an argument)
     searchBandsInTown(inputArtist);
-});
-
-closeBtn.on("click", function () {
-    modalBgTours.removeClass("bg-active");
 });
 
 //SPOTIFY
