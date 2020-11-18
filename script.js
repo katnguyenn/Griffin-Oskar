@@ -4,11 +4,13 @@ var contactModal = $("#contact");
 var modalBgTours = $(".modal-bg-tours");
 var modalBgPhotos = $(".modal-bg-photos");
 var modalBgContact = $(".modal-bg-contact");
+var displayBands = $(".modal-bands");
 var modalClose = $(".modal-close");
+var closeBtn = $("<span><span class='modal-close'>&times</span>");
 
-toursModal.on("click", function () {
-    modalBgTours.addClass("bg-active");
-});
+// toursModal.on("click", function () {
+//     modalBgTours.addClass("bg-active");
+// });
 
 photosModal.on("click", function () {
     modalBgPhotos.addClass("bg-active");
@@ -23,7 +25,6 @@ $(".sidenav-trigger").on("click", function () {
 });
 
 modalClose.on("click", function () {
-    modalBgTours.removeClass("bg-active");
     modalBgPhotos.removeClass("bg-active");
     modalBgContact.removeClass("bg-active");
 });
@@ -50,28 +51,34 @@ function searchBandsInTown(artist) {
             var goToArtist = $("<a>").attr("href", response.url).text("See Tour Dates");
 
             // Empty the contents of the artist-div, append the new artist content
-            $("#tour-dates").empty();
-            $("#tour-dates").append(artistURL, artistImage, trackerCount, upcomingEvents, goToArtist);
+            
+            displayBands.empty();
+            displayBands.append(artistURL, artistImage, trackerCount, upcomingEvents, goToArtist);
+            displayBands.prepend(closeBtn);
         } else {
-            $("#tour-dates").empty();
-            var comeBack = $("<h1>").text("Check back for tour dates at a later time.");
-            $("#tour-dates").append(comeBack);
+            displayBands.empty();
+            var comeBack = $("<h2>").text("Check back for tour dates at a later time.");
+            displayBands.append(comeBack);
+            displayBands.prepend(closeBtn);
         }
+        closeBtn.on("click", function () {
+            modalBgTours.removeClass("bg-active");
+        });
     });
 }
 
 // Event handler for user clicking the tour dates button
-$("#artist-div").on("click", function (event) {
+toursModal.on("click", function (event) {
     console.log('event listener');
     // Preventing the button from trying to submit the form
     event.preventDefault();
     console.log('event listener');
+    modalBgTours.addClass("bg-active");
     // Storing the artist name
     var inputArtist = "Griffin Oskar";
 
     // Running the searchBandsInTown function(passing in the artist as an argument)
     searchBandsInTown(inputArtist);
-    $(".modal-bg-sidenav").removeClass("bg-active");
 });
 
 //SPOTIFY
