@@ -7,17 +7,16 @@ var modalBgContact = $(".modal-bg-contact");
 var displayBands = $(".modal-bands");
 var modalClose = $(".modal-close");
 var closeBtn = $("<span><span class='modal-close'>&times</span>");
-
-// toursModal.on("click", function () {
-//     modalBgTours.addClass("bg-active");
-// });
+var socialLinks = $(".social-links");
 
 photosModal.on("click", function () {
     modalBgPhotos.addClass("bg-active");
+    socialLinks.addClass("hide");
 });
 
 contactModal.on("click", function () {
     modalBgContact.addClass("bg-active");
+    socialLinks.addClass("hide");
 });
 
 $(".sidenav-trigger").on("click", function () {
@@ -28,6 +27,7 @@ modalClose.on("click", function () {
     modalBgPhotos.removeClass("bg-active");
     modalBgContact.removeClass("bg-active");
     $(".modal-bg-sidenav").removeClass("bg-active");
+    socialLinks.removeClass("hide");
 });
 
 //Bands In Town API
@@ -64,6 +64,7 @@ function searchBandsInTown(artist) {
         }
         closeBtn.on("click", function () {
             modalBgTours.removeClass("bg-active");
+            socialLinks.removeClass("hide");
         });
     });
 }
@@ -75,6 +76,7 @@ toursModal.on("click", function (event) {
     event.preventDefault();
     console.log('event listener');
     modalBgTours.addClass("bg-active");
+    socialLinks.addClass("hide");
     // Storing the artist name
     var inputArtist = "Griffin Oskar";
 
