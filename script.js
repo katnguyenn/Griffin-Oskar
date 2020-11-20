@@ -41,16 +41,7 @@ $(document).ready(function () {
             modalBgPhotos.removeClass("bg-active");
             socialLinks.removeClass("hide");
         });
-    // $("#up").on("click", function() {
-    //   console.log("cool");
-    //   var currentImg = $(".active");
-    //   var upImg = currentImg.prev();
-    //   if (upImg.length) {
-    //     currentImg.removeClass("active").css("z-index", -10);
-    //     upImg.addClass("active").css("z-index", 10);
-    //   }
-    // });
-  });
+    });
 });
 
 contactModal.on("click", function () {
@@ -121,19 +112,3 @@ toursModal.on("click", function (event) {
     // Running the searchBandsInTown function(passing in the artist as an argument)
     searchBandsInTown(inputArtist);
 });
-
-//SPOTIFY
-// different spotify endpoints 
-const artistEndpoint = 'https://api.spotify.com/v1/artists/spotify:artist:5ziQ5Xt7CSrcnatEC4Ufy6';
-const albumEndpoint = 'https://api.spotify.com/v1/artists/spotify:artist:5ziQ5Xt7CSrcnatEC4Ufy6/albums';
-// api key and client ID
-const clientId = 'c2df46601887473ea1f0dd4ba51565a6';
-const apikey = 'b3d0c7d5713049569240944b341bda56';
-// // create playlist 
-// const createPlaylist = await fetch(artistEndpoint, {
-//     method: 'POST',
-//     headers: { 'Authorization' : 'Bearer ' + token}
-// });
-
-// const data = await result.json();
-// return data.categories.items;
