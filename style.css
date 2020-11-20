@@ -283,15 +283,6 @@ button {
   font-size: 40px;
 }
 
-/* .bottomnav {
-  overflow: hidden;
-  margin-top: 3em;
-}
-
-.bottomnav a {
-  font-size: 20px;
-} */
-
 #tours,
 #photos,
 #contact {
@@ -426,21 +417,6 @@ button {
 .photo {
   cursor: pointer;
 }
-/* #down {
- position: fixed;
- z-index: 100;
- margin-left: -20px;
-}
-#up {
- position: fixed; 
- z-index: 100;
-}
-#down,
-#up {
- float: left;
- margin-top: 120px;
- cursor: pointer;
-} */
 
 @media only screen and (max-width: 888px) {
   .glitch {
@@ -487,7 +463,6 @@ button {
   h2 {
     font-size: 30px;
   }
-
 }
 
 @media only screen and (max-width: 501px) {
@@ -498,9 +473,6 @@ button {
   h2 {
     font-size: 20px;
   }
-
-
-
 }
 
 @media only screen and (max-width: 480px) {
@@ -524,7 +496,4 @@ button {
   .photo {
     cursor: pointer;
   }
-
-
-  
 }
