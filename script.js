@@ -9,9 +9,39 @@ var modalClose = $(".modal-close");
 var closeBtn = $("<span><span class='modal-close'>&times</span>");
 var socialLinks = $(".social-links");
 
-photosModal.on("click", function () {
-    modalBgPhotos.addClass("bg-active");
-    socialLinks.addClass("hide");
+$(document).ready(function () {
+  $(photosModal).on("click", function () {
+      modalBgPhotos.addClass("bg-active");
+      socialLinks.addClass("hide");
+    var pModal = `
+    <div class="carousel">
+    <div class="inner">
+    <img src="./Photos/img-1.JPG" alt="First Image" class="active photo"></a>
+    <img src="./Photos/img-2.JPG" alt="Second Image" class="photo"></a>
+    <img src="./Photos/img-3.JPG" alt="Third Image" class="photo"></a>
+    <img src="./Photos/img-4.JPG" alt="Fourth Image" class="photo"></a>
+    <img src="./Photos/img-5.JPG" alt="Fifth Image" class="photo"></a>
+    <img src="./Photos/img-6.JPG" alt="Sixth Image" class="photo"></a>
+    </div>
+    </div>
+    `
+    $(".modal-carousel").empty();
+    $(".modal-carousel").prepend(closeBtn);
+    $(".modal-carousel").append(pModal);
+    $(".photo").on("click", function () {
+      console.log("clicked");
+      var currentImg = $(".active");
+      var nextImg = currentImg.next();
+      if (nextImg.length) {
+        currentImg.removeClass("active");
+        nextImg.addClass("active");
+      }
+    });
+      closeBtn.on("click", function () {
+            modalBgPhotos.removeClass("bg-active");
+            socialLinks.removeClass("hide");
+        });
+    });
 });
 
 contactModal.on("click", function () {
@@ -24,7 +54,6 @@ $(".sidenav-trigger").on("click", function () {
 });
 
 modalClose.on("click", function () {
-    modalBgPhotos.removeClass("bg-active");
     modalBgContact.removeClass("bg-active");
     $(".modal-bg-sidenav").removeClass("bg-active");
     socialLinks.removeClass("hide");
@@ -83,19 +112,3 @@ toursModal.on("click", function (event) {
     // Running the searchBandsInTown function(passing in the artist as an argument)
     searchBandsInTown(inputArtist);
 });
-
-//SPOTIFY
-// different spotify endpoints 
-const artistEndpoint = 'https://api.spotify.com/v1/artists/spotify:artist:5ziQ5Xt7CSrcnatEC4Ufy6';
-const albumEndpoint = 'https://api.spotify.com/v1/artists/spotify:artist:5ziQ5Xt7CSrcnatEC4Ufy6/albums';
-// api key and client ID
-const clientId = 'c2df46601887473ea1f0dd4ba51565a6';
-const apikey = 'b3d0c7d5713049569240944b341bda56';
-// // create playlist 
-// const createPlaylist = await fetch(artistEndpoint, {
-//     method: 'POST',
-//     headers: { 'Authorization' : 'Bearer ' + token}
-// });
-
-// const data = await result.json();
-// return data.categories.items;
