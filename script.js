@@ -9,9 +9,48 @@ var modalClose = $(".modal-close");
 var closeBtn = $("<span><span class='modal-close'>&times</span>");
 var socialLinks = $(".social-links");
 
-photosModal.on("click", function () {
-    modalBgPhotos.addClass("bg-active");
-    socialLinks.addClass("hide");
+$(document).ready(function () {
+  $(photosModal).on("click", function () {
+      modalBgPhotos.addClass("bg-active");
+      socialLinks.addClass("hide");
+    var pModal = `
+    <div class="carousel">
+    <div class="inner">
+    <img src="./Photos/img-1.JPG" alt="First Image" class="active photo"></a>
+    <img src="./Photos/img-2.JPG" alt="Second Image" class="photo"></a>
+    <img src="./Photos/img-3.JPG" alt="Third Image" class="photo"></a>
+    <img src="./Photos/img-4.JPG" alt="Fourth Image" class="photo"></a>
+    <img src="./Photos/img-5.JPG" alt="Fifth Image" class="photo"></a>
+    <img src="./Photos/img-6.JPG" alt="Sixth Image" class="photo"></a>
+    </div>
+    </div>
+    `
+    $(".modal-carousel").empty();
+    $(".modal-carousel").prepend(closeBtn);
+    $(".modal-carousel").append(pModal);
+    $(".photo").on("click", function () {
+      console.log("clicked");
+      var currentImg = $(".active");
+      var nextImg = currentImg.next();
+      if (nextImg.length) {
+        currentImg.removeClass("active");
+        nextImg.addClass("active");
+      }
+    });
+      closeBtn.on("click", function () {
+            modalBgPhotos.removeClass("bg-active");
+            socialLinks.removeClass("hide");
+        });
+    // $("#up").on("click", function() {
+    //   console.log("cool");
+    //   var currentImg = $(".active");
+    //   var upImg = currentImg.prev();
+    //   if (upImg.length) {
+    //     currentImg.removeClass("active").css("z-index", -10);
+    //     upImg.addClass("active").css("z-index", 10);
+    //   }
+    // });
+  });
 });
 
 contactModal.on("click", function () {
@@ -24,7 +63,6 @@ $(".sidenav-trigger").on("click", function () {
 });
 
 modalClose.on("click", function () {
-    modalBgPhotos.removeClass("bg-active");
     modalBgContact.removeClass("bg-active");
     $(".modal-bg-sidenav").removeClass("bg-active");
     socialLinks.removeClass("hide");
