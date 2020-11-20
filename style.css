@@ -457,10 +457,6 @@ button {
     width: 100%;
   }
 
-  #soundcloud {
-    display: none;
-  }
-
   .social-links {
     bottom: 1em;
     display: none;
@@ -483,12 +479,28 @@ button {
   #footer-rights {
     margin-bottom: auto;
   }
+
+  .photo {
+    cursor: pointer;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
 }
 
 @media only screen and (max-width: 501px) {
   .glitch {
     font-size: 40px;
   }
+
+  h2 {
+    font-size: 20px;
+  }
+
+
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -501,10 +513,6 @@ button {
     height: 250px;
   }
 
-  #soundcloud {
-    display: none;
-  }
-
   .social-links {
     display: none;
   }
@@ -512,4 +520,11 @@ button {
   .sidenav-trigger {
     display: block;
   }
+
+  .photo {
+    cursor: pointer;
+  }
+
+
+  
 }
