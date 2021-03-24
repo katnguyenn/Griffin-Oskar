@@ -20,7 +20,10 @@ We set out to give a pop artist by the name of Griffin Oscar a place where fans 
 
 * The page contains HTML, CSS, Materialize (CSS Framework), Javascript, jQuery and Node. 
 * The page is responsive. 
-* APIs - The page utilizes two 3rd party APIs. First, the Bands In Town API to pull all of Griffin's latest dates. Second, Mailchimp to generate Griffin's sign-up sheet for his newsletter.
+* APIs - The page utilizes two 3rd party APIs
+    1. First, the Bands In Town API to pull all of Griffin's latest dates.
+    2. Second, Mailchimp to generate Griffin's sign-up sheet for his newsletter.
+* The images are set up in a carousel and when you click "Images" in the menue the carousel will pop up in a modal. When you click on the images they will cycle through the carousel.  
 
 ## Installation
 *Steps required to install project and get the development environment established:*
