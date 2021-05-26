@@ -2,7 +2,7 @@
   
 ![GitHub](https://img.shields.io/badge/license-MIT-green)
 
-<a href="https://katnguyenn.github.io/project1/">Click here to see it in action.</a>
+<a href="https://katnguyenn.github.io/Griffin-Oskar/">Click here to see it in action.</a>
 
 ## Table of Contents
 * [Description](#description)
