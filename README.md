@@ -18,7 +18,7 @@
 We set out to give a pop artist by the name of Griffin Oscar a place where fans can go to find out all of his latest information. Griffin is an amazing artist and producer with millions of streams on his songs but he did not have a website to link everything together. The goal for his site was to give him a place for fans, labels and managers to be able to find out everything there is to know about Griffin. He also wanted to start a mailing list and give tour updates.
 <br>
 
-<img src="./Photos/GriffinOskar.gif" alt="gif of website" width="250">
+<img src="./Photos/GriffinOskar.gif" alt="gif of website" width="400">
 
 * The page contains HTML, CSS, Materialize (CSS Framework), Javascript, jQuery and Node. 
 * The page is responsive. 
